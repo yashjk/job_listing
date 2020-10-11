@@ -1,7 +1,7 @@
 class Job < ApplicationRecord
 
   validates :company_name,:job_title, :role, 
-            :level :contract, :location,
+            :level, :contract, :location,
             :languages, :tools, presence: true
 
   validates :job_description, :job_requirements, 

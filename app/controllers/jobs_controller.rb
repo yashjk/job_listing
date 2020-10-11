@@ -17,6 +17,9 @@ class JobsController < ApplicationController
     end
   end
 
+  def show
+  end
+
   private
   
   def url_params
