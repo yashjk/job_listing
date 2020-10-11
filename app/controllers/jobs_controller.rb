@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
-  before_action: :load_job_list, only: [ :index ]
-  before_action: :url_params, only: [ :create ]
+  before_action :load_job_list, only: [ :index ]
+  before_action :url_params, only: [ :create ]
 
   def index
   end
