@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
   before_action :load_job_list, only: [ :index ]
-  before_action :url_params, only: [ :create ]
+  before_action :job_params, only: [ :create ]
 
   def index
   end
@@ -22,10 +22,14 @@ class JobsController < ApplicationController
 
   private
   
-  def url_params
-    params.require(:job).permit(:company_name, :job_title, :role, 
-                          :level, :contract, :location, :languages, 
-                          :tools, :job_description, :job_requirements)
+  def job_params
+    params.require(:job).permit(:company_name, :job_title, :address, :role, 
+    :level, :contract, :location, :job_description, :job_requirements, languages: [], 
+    tools: [])
+  end
+
+  def load_job
+    @job = Job.find(params[:id])
   end
 
   def load_job_list
