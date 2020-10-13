@@ -1,47 +1,77 @@
-import React from 'react'
+import React from "react";
+import { Tag } from "antd";
+import "antd/dist/antd.css";
 
-const Details = () => {
+const Details = (props) => {
   return (
-    <div className="container">
-      <div className="card mb-3">
+    <div
+      className="container"
+      style={{
+        fontFamily: "'Spartan', sans-serif",
+        boxShadow: "3px 3px 18px -4px rgba(0,0,0,0.47)",
+      }}
+    >
+      <div className="mb-3  p-3">
         <div className="card-body">
-          <h5 className="card-title">Company Name</h5>
-          <p className="card-text">Address</p>
+          <h5 className="card-title heading-2" style={{ fontWeight: "700" }}>
+            {props.company_name}
+          </h5>
+          <p className="card-text">{props.location}</p>
           <div className="row justify-content-between">
             <div className="bg-light col-3 rounded">
               <p className="text-muted mt-3">Role</p>
-              <h5>Frontend Developer</h5>
+              <h5>{props.role}</h5>
             </div>
             <div className="bg-light col-3 rounded">
               <p className="text-muted mt-3">Level</p>
-              <h5>Midweight</h5>
+              <h5>{props.level}</h5>
             </div>
             <div className="bg-light col-3 rounded">
               <p className="text-muted mt-3">Contract</p>
-              <h5>Fulltime Employee</h5>
+              <h5>{props.contract}</h5>
             </div>
           </div>
-          <h5 className="mt-3">Job description</h5>
-          <h5 className="mt-3">Job Requirements</h5>
-          <h5 className="mt-3">Programming Languages</h5>
+          <h4 className="heading mt-3">Job Title</h4>
+          <p>{props.job_title}</p>
+          <h4 className="heading mt-3">Job description</h4>
+          <p>{props.job_description}</p>
+          <h4 className="heading mt-3">Job Requirements</h4>
+          <p>{props.job_requirements}</p>
+          <h4 className="heading mt-3">Programming Languages</h4>
           <div className="row">
-            <span className="bg-light rounded text-muted ml-2">HTML</span>
-            <span className="bg-light rounded text-muted ml-2">CSS</span>
-            <span className="bg-light rounded text-muted ml-2">JavaScript</span>
-            <span className="bg-light rounded text-muted ml-2">Ruby</span>
+            {props.languages.map((language) => (
+              <Tag
+                style={{
+                  backgroundColor: "hsl(180, 31%, 95%)",
+                  color: "hsl(180, 8%, 52%)",
+                  fontWeight: 700,
+                  margin: "1rem",
+                }}
+              >
+                {language}
+              </Tag>
+            ))}
           </div>
-          <h5>Tools</h5>
+          <h4 className="heading">Tools</h4>
           <div className="row">
-            <span className="bg-light rounded text-muted ml-2">React</span>
-            <span className="bg-light rounded text-muted ml-2">Vue js</span>
-            <span className="bg-light rounded text-muted ml-2">Bootstrap</span>
-            <span className="bg-light rounded text-muted ml-2">TailwindCSS</span>
+            {props.tools.map((tool) => (
+              <Tag
+                style={{
+                  backgroundColor: "hsl(180, 31%, 95%)",
+                  color: "hsl(180, 8%, 52%)",
+                  fontWeight: 700,
+                  margin: "1rem",
+                }}
+              >
+                {tool}
+              </Tag>
+            ))}
           </div>
         </div>
+        <button className="btn btn-primary col">APPLY NOW</button>
       </div>
-      <button className="btn btn-primary col">APPLY NOW</button>
     </div>
-    )
-}
+  );
+};
 
 export default Details;

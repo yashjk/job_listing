@@ -1,11 +1,11 @@
 class Job < ApplicationRecord
 
-  validates :company_name,:job_title, :role, 
+  validates :company_name, :address, :job_title, :role, 
             :level, :contract, :location,
             :languages, :tools, presence: true
 
   validates :job_description, :job_requirements, 
-              length: { minimum: 150, maximum: 500 }
+              length: { maximum: 500 }
 
   enum role: { Frontend: 0, Backend: 1, FullStack: 2,
                                         Intern: 3 }

@@ -21,9 +21,9 @@ ActiveRecord::Schema.define(version: 2020_10_09_153139) do
     t.string "address", null: false
     t.text "job_requirements", null: false
     t.text "job_description", null: false
-    t.string "role", null: false
-    t.string "level", null: false
-    t.string "contract", null: false
+    t.integer "role", default: 0
+    t.integer "level", default: 0
+    t.integer "contract", default: 0
     t.string "location", null: false
     t.text "languages", default: [], array: true
     t.text "tools", default: [], array: true
