@@ -391,7 +391,7 @@ const JobCreation = () => {
               <Option value="CSS">CSS</Option>
               <Option value="JavaScript">JavaScript</Option>
               <Option value="Ruby">Ruby</Option>
-              <Option value="Go">Go</Option>
+              <Option value="Python">Python</Option>
             </Select>
           </Form.Item>
           <h2 className="heading">Tools</h2>
@@ -417,11 +417,11 @@ const JobCreation = () => {
                 })
               }
             >
-              <Option value="Angular">Angular</Option>
-              <Option value="Tailwind CSS">Tailwind CSS</Option>
               <Option value="React">React</Option>
               <Option value="Vue js">Vue js</Option>
-              <Option value="Bootstrap">Bootstrap</Option>
+              <Option value="Django">Django</Option>
+              <Option value="Tailwind CSS">Tailwind CSS</Option>
+              <Option value="ROR">ROR (Ruby on Rails)</Option>
             </Select>
           </Form.Item>
         </Form>
