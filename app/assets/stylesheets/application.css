@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+.container {
+  font-family: 'Spartan', sans-serif;
+}
 
 .header {
   background-color: hsl(180, 52%, 96%);

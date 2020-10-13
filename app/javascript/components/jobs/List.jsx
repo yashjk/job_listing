@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { Card, Tag } from "antd";
+import { CardWrapper } from "../../utils/StyledComponent";
 
 export default function List(props) {
   const [activeTag, setActiveTag] = useState("");
@@ -30,7 +31,7 @@ export default function List(props) {
 
   return (
     <div className="background">
-      <div className="container mt-5">
+      <div className="container">
         <button
           className="btn btn-link"
           onClick={() => {
@@ -42,14 +43,7 @@ export default function List(props) {
         </button>
         <div>
           {activeList.map((job) => (
-            <Card
-              style={{
-                width: "100%",
-                boxShadow: "3px 3px 18px -4px rgba(0,0,0,0.47)",
-                fontFamily: "'Spartan', sans-serif",
-              }}
-              className="mt-2"
-            >
+            <CardWrapper>
               <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-2">
                 <div className="col">
                   <div className="row">
@@ -118,7 +112,7 @@ export default function List(props) {
                     style={{
                       color: "hsl(180, 31%, 95%)",
                       width: "100%",
-                      textAlign: "unset",
+                      marginBottom: "none",
                     }}
                   />
                 </div>
@@ -172,7 +166,7 @@ export default function List(props) {
                   </div>
                 </div>
               </div>
-            </Card>
+            </CardWrapper>
           ))}
         </div>
       </div>
