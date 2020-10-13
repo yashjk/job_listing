@@ -6,7 +6,7 @@ ruby '2.7.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use postgresql as the database for Active Record
-gem 'pg'
+gem 'pg', :group => [:production]
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.7'
   gem 'bootstrap'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
-
+gem 'sqlite3', '~> 1.4', :group => [:development, :test]
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
 
