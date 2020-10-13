@@ -19,7 +19,10 @@ export default function List(props) {
     return Math.ceil(elapsedTime);
   };
 
+  var count = 0;
+
   const handleActiveTag = (value, key) => {
+    count += 1;
     setActiveTag(key);
     const filteredList = props.jobs.filter((job) => job[key].includes(value));
     setActiveList(filteredList);
@@ -28,6 +31,15 @@ export default function List(props) {
   return (
     <div className="background">
       <div className="container mt-5">
+        <button
+          className="btn btn-link"
+          onClick={() => {
+            count = 0;
+            setActiveList(props.jobs);
+          }}
+        >
+          clear active list
+        </button>
         <div>
           {activeList.map((job) => (
             <Card
