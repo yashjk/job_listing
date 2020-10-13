@@ -28,6 +28,7 @@ export default function List(props) {
                 boxShadow: "3px 3px 18px -4px rgba(0,0,0,0.47)",
                 fontFamily: "'Spartan', sans-serif",
               }}
+              className="mt-2"
             >
               <div className="row">
                 <div className="col-1 d-flex justify-content-center align-items-center">
