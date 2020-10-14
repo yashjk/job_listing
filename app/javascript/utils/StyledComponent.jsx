@@ -8,8 +8,6 @@ export const HeaderWrapper = styled.div`
   font-weight: 700 !important;
 `;
 
-//Ask bim
-
 export const CardWrapper = styled(Card)`
   width: 100%;
   box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.47) !important;
@@ -19,12 +17,13 @@ export const CardWrapper = styled(Card)`
 
 export const BodyWrapper = styled.div`
   background-color: hsl(180, 52%, 96%) !important;
-  height: 100vh;
+  height: 100vh && 100%;
+  font-family: "Spartan", sans-serif !important;
+  font-size: 15px;
 `;
 
 export const FormContainerWrapper = styled.div`
-  padding: 2rem !important;
-  font-family: "Spartan", sans-serif !important;
+  padding: 4rem !important;
   background-color: #fff !important;
   box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.47) !important;
 `;
@@ -46,9 +45,10 @@ export const HeadingWrapper = styled.h3`
   font-size: 15px !important;
   font-weight: 700 !important;
   margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 `;
 
-export const ImageWrapper = styled.img`
+export const ListImageWrapper = styled.img`
   height: 5rem !important;
   width: 5rem !important;
   border-radius: 50% !important;
@@ -73,8 +73,10 @@ export const FeaturedTagWrapper = styled(Tag)`
 export const TagsWrapper = styled(Tag)`
   background-color: hsl(180, 31%, 95%) !important;
   color: hsl(180, 8%, 52%) !important;
-  fontweight: 700 !important;
-  margin-top: 1rem;
+  font-weight: 700 !important;
+  margin-top: 1rem !important;
+  padding: 0.5rem !important;
+  border: none !important;
 `;
 
 export const Separator = styled.hr`
@@ -85,16 +87,37 @@ export const Separator = styled.hr`
 export const DetailTags = styled(Tag)`
   background-color: hsl(180, 31%, 95%) !important;
   color: hsl(180, 8%, 52%) !important;
-  font-weight: 700 !important;
+  font-weight: 500 !important;
   margin: 1rem !important;
+  padding: 1rem !important;
+  border: none !important;
+  border-radius: 10px !important;
 `;
 
 export const DetailsContainer = styled.div`
-  font-family: "Spartan", sans-serif;
   box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.47);
+  background-color: #fff;
 `;
 
-export const DetailsImage = styled.img`
-  width: 60%;
-  height: 10rem;
-`
+export const DetailsCoverImage = styled.img`
+  width: 100%;
+  height: 15rem;
+`;
+export const DetailsProfileImage = styled.img`
+  margin-left: 2rem !important;
+  margin-top: -4rem !important;
+  height: 8rem !important;
+  width: 8rem !important;
+  border-radius: 50% !important;
+  border: 2px solid #fff;
+`;
+
+export const JobInfoCard = styled.div`
+  background-color: hsl(180, 31%, 95%) !important;
+  padding: 0.7rem;
+  width: 20rem;
+  margin: 0.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  font-weight: 700;
+`;

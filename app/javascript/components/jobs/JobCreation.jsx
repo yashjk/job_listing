@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Editor } from "react-draft-wysiwyg";
 import { EditorState, convertToRaw } from "draft-js";
+import draftToHtml from "draftjs-to-html";
 import { Form, Input, Select, Checkbox } from "antd";
 import { fetchApi } from "../../utils/API";
 import {
@@ -17,7 +18,7 @@ import cities from "../../utils/cities";
 const JobCreation = () => {
   const [form] = Form.useForm();
   const { Option } = Select;
-  const [editorState, setEditor] = useState(EditorState.createEmpty());
+  const [editorState, setEditorState] = useState(EditorState.createEmpty());
   const [job_description, setJobDescription] = useState("");
   const [initialValues, setInitialValues] = useState({
     company_name: "",
@@ -41,12 +42,15 @@ const JobCreation = () => {
   };
 
   const onEditorStateChange = (editorState) => {
-    setEditor(editorState);
-    const blocks = convertToRaw(editorState.getCurrentContent()).blocks;
-    const value = blocks
-      .map((block) => (!block.text.trim() && "\n") || block.text)
-      .join("\n");
-    setJobDescription(value);
+    setEditorState(editorState);
+    setJobDescription(
+      draftToHtml(convertToRaw(editorState.getCurrentContent()))
+    );
+    // const blocks = convertToRaw(editorState.getCurrentContent()).blocks;
+    // const value = blocks
+    //   .map((block) => (!block.text.trim() && "\n") || block.text)
+    //   .join("\n");
+    // setJobDescription(value);
   };
 
   const handleSubmit = (e) => {
@@ -187,6 +191,10 @@ const JobCreation = () => {
                   />
                 </Form.Item>
               </div>
+            </div>
+          </Form>
+          <Form form={form} name="job_info">
+            <div className="row">
               <div className="col-6">
                 <Form.Item
                   name="level"
@@ -215,10 +223,6 @@ const JobCreation = () => {
                   </SelectWrapper>
                 </Form.Item>
               </div>
-            </div>
-          </Form>
-          <Form form={form} name="job_info">
-            <div className="row">
               <div className="col-6">
                 <Form.Item
                   name="role"
@@ -247,6 +251,10 @@ const JobCreation = () => {
                   </SelectWrapper>
                 </Form.Item>
               </div>
+            </div>
+          </Form>
+          <Form form={form} name="job_info">
+            <div className="row">
               <div className="col-6">
                 <Form.Item
                   name="contract"
@@ -274,10 +282,6 @@ const JobCreation = () => {
                   </SelectWrapper>
                 </Form.Item>
               </div>
-            </div>
-          </Form>
-          <Form form={form} name="job_info">
-            <div className="row">
               <div className="col-6">
                 <Form.Item
                   name="location"
@@ -307,13 +311,13 @@ const JobCreation = () => {
                   </SelectWrapper>
                 </Form.Item>
               </div>
-              <div className="col-6"></div>
             </div>
           </Form>
           <HeadingWrapper>Job Overview:</HeadingWrapper>
           <Form form={form} name="job-overview" layout="vertical">
             <Form.Item
               name="job_requirements"
+              className="mt-2 mb-2"
               rules={[
                 {
                   required: true,
@@ -333,7 +337,6 @@ const JobCreation = () => {
                   borderTop: "none",
                   borderRight: "none",
                   borderLeft: "none",
-                  marginBottom: "0.5rem",
                 }}
                 value={initialValues.job_requirements}
                 onChange={handleChange}
@@ -341,8 +344,8 @@ const JobCreation = () => {
             </Form.Item>
             <Editor
               editorState={editorState}
-              wrapperClassName="mt-3"
-              editorClassName="border-top-0 border-right-0 border-left-0 border-bottom"
+              wrapperClassName="mt-5"
+              editorClassName="pt-5 pl-1 border-right border-left border-bottom"
               placeholder="Job description here..."
               onEditorStateChange={onEditorStateChange}
             />
