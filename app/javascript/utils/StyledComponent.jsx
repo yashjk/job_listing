@@ -19,7 +19,7 @@ export const CardWrapper = styled(Card)`
 
 export const BodyWrapper = styled.div`
   background-color: hsl(180, 52%, 96%) !important;
-  height: 100%;
+  height: 100vh;
 `;
 
 export const FormContainerWrapper = styled.div`
