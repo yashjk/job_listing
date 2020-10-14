@@ -13,20 +13,6 @@
  *= require_tree .
  *= require_self
  */
-.container {
-  font-family: 'Spartan', sans-serif;
-}
-
-.header {
-  background-color: hsl(180, 52%, 96%);
-  min-height: 100%;
-}
-
-.heading {
-  font-size: 1rem;
-  font-weight: 700;
-  margin-top: 2rem;
-}
 
 .heading2 {
   font-size: 1rem;
