@@ -74,6 +74,7 @@ export const TagsWrapper = styled(Tag)`
   background-color: hsl(180, 31%, 95%) !important;
   color: hsl(180, 8%, 52%) !important;
   fontweight: 700 !important;
+  margin-top: 1rem;
 `;
 
 export const Separator = styled.hr`
