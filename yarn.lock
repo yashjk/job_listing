@@ -1075,6 +1075,11 @@
     "@types/minimatch" "*"
     "@types/node" "*"
 
+"@types/google.fonts@^1.0.2":
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/@types/google.fonts/-/google.fonts-1.0.2.tgz#c9461afe3638877a372546c327f442f5d9351f60"
+  integrity sha512-V1bkKifXl7wN8Jrmsyh+nALf311P0jFUGVZ4tEGqSdwpIx9o2E6u4mJyeSpNC/e/7spH0GzMhElIcQWBQC0HRg==
+
 "@types/json-schema@^7.0.5":
   version "7.0.6"
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.6.tgz#f4c7ec43e81b319a9815115031709f26987891f0"
