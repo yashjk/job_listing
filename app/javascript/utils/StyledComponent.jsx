@@ -28,7 +28,6 @@ export const FormContainerWrapper = styled.div`
   box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.47) !important;
 `;
 
-// Ask bim
 export const InputWrapper = styled(Input)`
   border-top: none !important;
   border-left: none !important;
