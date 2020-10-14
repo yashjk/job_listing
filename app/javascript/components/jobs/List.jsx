@@ -50,7 +50,7 @@ export default function List(props) {
         </button>
         <div>
           {activeList.map((job) => (
-            <CardWrapper onClick={() => renderShowPage(job.id)}>
+            <CardWrapper>
               <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-2">
                 <div className="col">
                   <div className="row">
@@ -64,6 +64,7 @@ export default function List(props) {
                             color: "hsl(180, 8%, 52%)",
                             fontWeight: "700",
                           }}
+                          onClick={() => renderShowPage(job.id)}
                         >
                           {job.company_name}
                         </p>
