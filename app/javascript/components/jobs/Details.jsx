@@ -47,9 +47,9 @@ const Details = (props) => {
               <h4 className="heading2 mt-6">Job Title</h4>
               {props.job_title}
               <h4 className="heading2 mt-4">Job description</h4>
-              <p className="description">
+              <div className="description">
                 {ReactHtmlParser(props.job_description)}
-              </p>
+              </div>
               <h4 className="heading2 mt-4">Job Requirements</h4>
               <p>{props.job_requirements}</p>
               <h4 className="heading2 mt-4">Programming Languages</h4>

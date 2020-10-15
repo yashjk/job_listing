@@ -32,3 +32,6 @@
   font-weight: 700;
   color: hsl(180, 8%, 52%);
 }
+.description.ul{
+  list-style-type: circle !important;
+}
