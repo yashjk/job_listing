@@ -100,7 +100,7 @@ export const DetailsContainer = styled.div`
 
 export const DetailsCoverImage = styled.img`
   width: 100%;
-  height: 15rem;
+  height: 17rem;
 `;
 export const DetailsProfileImage = styled.img`
   margin-left: 2rem !important;

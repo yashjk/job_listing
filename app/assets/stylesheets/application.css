@@ -18,3 +18,17 @@
   font-size: 1rem;
   font-weight: 700;
 }
+
+.redirect {
+  color: hsl(180, 8%, 52%);
+  font-weight: 700;
+}
+
+.redirect:hover{
+  cursor: pointer !important;
+}
+
+.description {
+  font-weight: 700;
+  color: hsl(180, 8%, 52%);
+}

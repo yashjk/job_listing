@@ -11,23 +11,15 @@ import "antd/dist/antd.css";
 import ReactHtmlParser from "react-html-parser";
 
 const Details = (props) => {
-  // const reducedArray = ReactHtmlParser(
-  //   props.job_description
-  // )[0].props.children;
-
-  // const reducedArray2 = reducedArray.map((elm) => elm.props);
-
-  // console.log(reducedArray2.map());
-
   return (
     <BodyWrapper>
       <div className="container">
         <DetailsContainer>
           <div className="d-flex justify-content-center">
-            <DetailsCoverImage src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTku7E3WZrhfawnWa3_08aHZUOhXaHo9wpRPQ&usqp=CAU"></DetailsCoverImage>
+            <DetailsCoverImage src="https://images.unsplash.com/photo-1602608972277-52dd53006617?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80"></DetailsCoverImage>
           </div>
           <div>
-            <DetailsProfileImage src="https://lh3.googleusercontent.com/proxy/zL4WdEG3cG15yqOpSzvhqnckcOBp2XGOAwPEPPTwNGOG4lL8Etbp8EIG0LB6z-pcTXlRPVVyXCoY6OO_Y9KQRA"></DetailsProfileImage>
+            <DetailsProfileImage src="https://images.unsplash.com/photo-1441802763029-b621005a04a5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1392&q=80"></DetailsProfileImage>
           </div>
           <div className="mb-3  p-4">
             <div className="card-body">
@@ -55,7 +47,9 @@ const Details = (props) => {
               <h4 className="heading2 mt-6">Job Title</h4>
               {props.job_title}
               <h4 className="heading2 mt-4">Job description</h4>
-              <p>{ReactHtmlParser(props.job_description)}</p>
+              <p className="description">
+                {ReactHtmlParser(props.job_description)}
+              </p>
               <h4 className="heading2 mt-4">Job Requirements</h4>
               <p>{props.job_requirements}</p>
               <h4 className="heading2 mt-4">Programming Languages</h4>
@@ -74,8 +68,8 @@ const Details = (props) => {
             <button className="btn btn-primary col">APPLY NOW</button>
           </div>
         </DetailsContainer>
-    </div>
-      </BodyWrapper>
+      </div>
+    </BodyWrapper>
   );
 };
 
