@@ -14,6 +14,7 @@ export const CardWrapper = styled(Card)`
   margin-bottom: 4rem !important;
   font-family: "Spartan", sans-serif !important;
   font-weight: 900 !important;
+  border-radius: 10px !important;
 `;
 
 export const BodyWrapper = styled.div`
@@ -22,12 +23,15 @@ export const BodyWrapper = styled.div`
   font-family: "Spartan", sans-serif !important;
   font-size: 15px;
   font-weight: 900 !important;
+  padding-top: 1rem;
+  padding-bottom: 0.1rem;
 `;
 
 export const FormContainerWrapper = styled.div`
   padding: 4rem !important;
   background-color: #fff !important;
   box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.47) !important;
+  margin-bottom: 2rem !important;
 `;
 
 export const InputWrapper = styled(Input)`
