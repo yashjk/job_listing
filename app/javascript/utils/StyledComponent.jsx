@@ -6,6 +6,7 @@ export const HeaderWrapper = styled.div`
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAa8AAAB1CAMAAADOZ57OAAAANlBMVEUAdP4EMv4ELP4Ad/4ELf4BY/4CW/4BXv4BYP4DWf4DV/4DVf4DTv4BXP4DUv4DUP4BZf4DS/5B5NwOAAACFElEQVR4nO3VCU4DMRBEUU8cAtkI3P+yBAgiyWy2R5qukv4/gaWnaqduQZtjTrRuS7gOcK0eXF7B5RVcXrVy7eEKiXV5xbq8gssruLyCyyu4vKrm2sEVGevyinV5BZdXcHkFl1dweVXOdYZLINblFVxecQy9gssruLyCy6sCrle4dGJdXsHlFcfQK7i8gssruLya4nqDSy7W5RVcXnEMvYLLK7i8gssruLyCyyu4vILLqx7XC1zKPXFtWZd2rMsruLx6OIZwyQeXVxxDr+DyimPoFVxecQydyol1GZV3CS6f8nmTOIY2Xbm6q9fmAy6HvrmuXlu4LPrh6hJcHv1ydYm/y6IbVxf9Dirqjwsvi/LuxoWXQ/9ceBl0x4WXfvdceMmX93dceKn3sC681Hviwku7x2OIl3g9LryU63PhJdwAF1665UOfCy/ZBrnwUm3oGOIl2/C68BJtjAsvyUa58FJsnAsvwfJxlAsvvaa48JJr4hjipdfkuvBSa4YLL63muPCSapYLL6XmufASqoALL51KuPCSqYgLL5XyewkXXiIVcuGlUSkXXhIVc+GlUDkXXgJVcOEVXw0XXuHlSwUXXtHVceEVXCUXXrHVcuEVWjUXXpHVc+EVWAMXXnHlUz0XXmHl07aeC6+omtaFV1SNXHjF1HYM8QqqmQuviNq58ApoARde67eEC6/VW8SF19rlzyVc3RceLRWbBjPEzQAAAABJRU5ErkJggg==");
   font-family: "Spartan", sans-serif !important;
   font-weight: 900 !important;
+  padding: 1rem !important;
 `;
 
 export const CardWrapper = styled(Card)`
@@ -17,9 +18,13 @@ export const CardWrapper = styled(Card)`
   border-radius: 10px !important;
 `;
 
+export const ContainerWrapper = styled.div`
+  height: 100vh !important;
+`;
+
 export const BodyWrapper = styled.div`
   background-color: hsl(180, 52%, 96%) !important;
-  height: 100vh && 100%;
+  height: 100% !important;
   font-family: "Spartan", sans-serif !important;
   font-size: 15px;
   font-weight: 900 !important;
@@ -125,4 +130,25 @@ export const JobInfoCard = styled.div`
   margin-bottom: 2rem;
   border-radius: 8px;
   font-weight: 900 !important;
+`;
+
+export const ClearListButtonWrapper = styled.div`
+  margin-top: -2.5rem !important;
+  border-radius: 10px !important;
+  border: 2px solid #fff;
+  background-color: #fff;
+  text-align: center;
+  font-weight: 900 !important;
+  margin-bottom: 1rem !important;
+  margin-left: 40% !important;
+  margin-right: 40% !important;
+  padding: 0.1 rem !important;
+  box-shadow: 3px 3px 18px -4px rgba(0, 0, 0, 0.47) !important;
+`;
+
+export const ClearListButton = styled.button`
+  margin: 0.2rem !important;
+  font-weight: 900 !important;
+  text-decoration: none !important;
+  color: #000 !important;
 `;
