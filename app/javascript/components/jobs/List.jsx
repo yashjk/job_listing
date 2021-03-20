@@ -53,7 +53,6 @@ export default function List(props) {
         </button>
         <div>
           {activeList.map((job, i) => (
-            console.log(job, i, `Job ${i +1}`),
             <CardWrapper key={job.id}>
               <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-2">
                 <div>
