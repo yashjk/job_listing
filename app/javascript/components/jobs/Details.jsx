@@ -55,13 +55,13 @@ const Details = (props) => {
               <h4 className="heading2 mt-4">Programming Languages</h4>
               <div className="row">
                 {props.languages.map((language) => (
-                  <DetailTags>{language}</DetailTags>
+                  <DetailTags key={language}>{language}</DetailTags>
                 ))}
               </div>
               <h4 className="heading2">Tools</h4>
               <div className="row">
                 {props.tools.map((tool) => (
-                  <DetailTags>{tool}</DetailTags>
+                  <DetailTags key={tool}>{tool}</DetailTags>
                 ))}
               </div>
             </div>
