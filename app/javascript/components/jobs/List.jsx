@@ -9,6 +9,7 @@ import {
   TagsWrapper,
   Separator,
 } from "../../utils/StyledComponent";
+import { createGlobalStyle } from "styled-components";
 
 export default function List(props) {
   const [activeList, setActiveList] = useState(props.jobs || []);
@@ -22,11 +23,13 @@ export default function List(props) {
   const timeAgo = (date) => {
     const created_at = new Date(date);
     const now = new Date();
-    const elapsedTime = Math.ceil((now - created_at) / (1000 * 60 * 60 * 24));
+    const elapsedTime = Math.floor((now - created_at) / (1000 * 60 * 60 * 24));
 
-    return elapsedTime < 2
-      ? elapsedTime + " day ago"
-      : elapsedTime + " days ago";
+    return elapsedTime < 1
+    ? "New"
+    : elapsedTime >= 2
+    ? elapsedTime + " days ago"
+    : "1 day ago";
   };
   const handleActiveTag = (value, key) => {
     const filteredList = props.jobs.filter((job) => job[key].includes(value));
@@ -49,8 +52,9 @@ export default function List(props) {
           clear active list
         </button>
         <div>
-          {activeList.map((job) => (
-            <CardWrapper>
+          {activeList.map((job, i) => (
+            console.log(job, i, `Job ${i +1}`),
+            <CardWrapper key={job.id}>
               <div className="row row-cols-1 row-cols-sm-1 row-cols-md-2 mt-2">
                 <div>
                   <div className="col">
@@ -98,6 +102,7 @@ export default function List(props) {
                     </TagsWrapper>
                     {job.languages.map((language) => (
                       <TagsWrapper
+                        key={language}
                         onClick={(e) => handleActiveTag(language, "languages")}
                       >
                         {language}
@@ -105,6 +110,7 @@ export default function List(props) {
                     ))}
                     {job.tools.map((tool) => (
                       <TagsWrapper
+                        key={tool}
                         onClick={(e) => handleActiveTag(tool, "tools")}
                       >
                         {tool}

@@ -41,6 +41,12 @@ const JobCreation = () => {
     });
   };
 
+  const handleChecked = ({target: {name, checked}}) => {
+    setInitialValues({
+      ...initialValues,
+      [name]: checked,
+    });
+  }
   const onEditorStateChange = (editorState) => {
     setEditorState(editorState);
     setJobDescription(
@@ -411,7 +417,7 @@ const JobCreation = () => {
             </Form.Item>
           </Form>
           <div>
-            <Checkbox name="featured" onChange={handleChange}>
+            <Checkbox name="featured" onChange={handleChecked}>
               Featured
             </Checkbox>
           </div>
